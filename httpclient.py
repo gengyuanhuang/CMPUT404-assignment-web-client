@@ -25,7 +25,7 @@ import re
 import urllib.parse
 
 
-LOG_REQUEST = True
+LOG_REQUEST = False
 
 def helper_parseURL(url):
     # this helper function will parse given url
