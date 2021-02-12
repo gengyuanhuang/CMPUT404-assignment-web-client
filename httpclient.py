@@ -112,7 +112,9 @@ class HTTPClient(object):
         return header
 
     def get_body(self, data):
-        body = data.split("\r\n\r\n")[1]
+        body = data.split("\r\n\r\n")
+        body.pop(0)
+        body = "\r\n\r\n".join(body)
         return body
 
     def sendall(self, data):
